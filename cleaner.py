@@ -1,5 +1,5 @@
 import os
-
+from tkinter import *
 #creates the folders
 def createFolders(rootdir, filetypes):
 	for folder in filetypes.keys():
