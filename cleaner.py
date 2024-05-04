@@ -48,43 +48,72 @@ def main():
 	createFolders(rootdir, filetypes)
 	for file in files:
 		moveToFolder(file, rootdir, filetypes)
+
+
+													#  GUI code starts here
+
 root = Tk()
 root.title('Desktop cleaner')
 root.geometry('800x800')
 videocount=3
+root.configure(bg="#FAEBD7")
 def TheButton():
     n = Label(root,text='Let start from the begining.').grid(column=10)
     
-
-myLabel = Label(root,text='No of Video files',fg='dark blue',font='algerian').grid(row=10, column=10,padx=200)
+option1 = ['Video file 1',
+           'Video file 2',
+           'Video file 3',
+           'Video file 4']
+myLabel = Label(root,text='Video files',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=10, column=10,padx=200)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'Video file 1','Video file 2','Video file 3','Video file 4').grid(row=10, column=11,pady=30)
+drop1 = OptionMenu(root,clicked,*option1).grid(row=10, column=11,pady=0)
 
-myLabel2 = Label(root,text='Audio files',fg='dark blue',font='algerian').grid(row=20, column=10)
+option2 = ['Audio file 1',
+           'Audio file 2',
+           'Audio file 3',
+           'Audio file 4']
+myLabel2 = Label(root,text='Audio files',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=20, column=10)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'Audio file 1','Audio file 2','Audio file 3','Audio file 4').grid(row=20, column=11)
+drop1 = OptionMenu(root,clicked,*option2).grid(row=20, column=11)
 
-myLabel3 = Label(root,text='Text files',fg='dark blue',font='algerian').grid(row=30, column=10)
+option3 = ['Text file 1',
+           'Text file 2',
+           'Text file 3',
+           'Text file 4']
+myLabel3 = Label(root,text='Text files',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=30, column=10)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'Text file 1','Text file 2','Text file 3','Text file 4').grid(row=30, column=11)
+drop1 = OptionMenu(root,clicked,*option3).grid(row=30, column=11)
 
-myLabel4 = Label(root,text='Executable files',fg='dark blue',font='algerian').grid(row=40, column=10)
+option4 = ['Executable file 1',
+           'Executable file 2',
+           'Executable file 3',
+           'Executable file 4']
+myLabel4 = Label(root,text='Executable files',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=40, column=10)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'executable file 1','executable file 2','executable file 3','executable file 4').grid(row=40, column=11)
+drop1 = OptionMenu(root,clicked,*option4).grid(row=40, column=11)
 
-myLabel5 = Label(root,text='Image files %d'%videocount,fg='dark blue',font='algerian').grid(row=50, column=10)
+option5 = ['Image file 1',
+           'Image file 2',
+           'Image file 3',
+           'Image file 4']
+myLabel5 = Label(root,text='Image files',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=50, column=10)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'Image file 1','Image file 2','Image file 3','Image file 4').grid(row=50, column=11)
+drop1 = OptionMenu(root,clicked,*option5).grid(row=50, column=11)
 
-myLabel6 = Label(root,text='Documents',fg='dark blue',font='algerian').grid(row=60, column=10)
+option6 = ['Document 1',
+           'Document 2',
+           'Document 3',
+           'Document 4']
+myLabel6 = Label(root,text='Documents',fg='dark blue',bg='#FFE4C4',font='algerian').grid(row=60, column=10)
 clicked = StringVar()
 clicked.set('4 Files')
-drop1 = OptionMenu(root,clicked,'Document 1','Document 2','Document 3','Document 4').grid(row=60, column=11)
+drop1 = OptionMenu(root,clicked,*option6).grid(row=60, column=11)
+
 
 
 
@@ -95,6 +124,7 @@ drop1 = OptionMenu(root,clicked,'Document 1','Document 2','Document 3','Document
 
 mylab = Label(root, text='Click the button to reset the folders').grid(row=100,column=10)
 mybutton = Button(root, text='Click Me',command=TheButton).grid(row=110,column=10) 
+
 
 
 
